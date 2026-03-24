@@ -1,6 +1,6 @@
 # Patient Churn Prediction Project
 
-## Overview
+# Overview
 
 This project analyzes patient data to understand the key factors influencing churn and builds a Logistic Regression model to predict whether a patient will leave or continue with the healthcare facility.
 
