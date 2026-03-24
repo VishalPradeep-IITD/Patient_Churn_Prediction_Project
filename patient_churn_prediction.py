@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-df=pd.read_csv('D:\SQL Practice files\csv_files\.vscode\patient_churn_project\patient_churn_dataset.csv')
+df=pd.read_csv('r'D:\Data Analytics Projects\patient_churn_dataset.csv'')
 df.head()
 # %%
 import seaborn as sns
