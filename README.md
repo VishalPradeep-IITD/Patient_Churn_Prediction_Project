@@ -74,7 +74,7 @@ The dataset includes:
 
 
 
-# 5. Key Insights
+## 5. Key Insights
 
 * **Missed Appointments:** A higher number of missed visits strongly indicates that the patient is likely to leave. It reflects reduced engagement with the healthcare service.
 
@@ -92,7 +92,7 @@ The dataset includes:
 
 * **Tenure:** New patients are more likely to leave compared to long-term patients. Early-stage engagement is critical for retention.
 
-# Requirements
+## Requirements
 
 * pandas
 * numpy
@@ -100,7 +100,7 @@ The dataset includes:
 * seaborn
 * scikit-learn
 
-# Future Improvements
+## Future Improvements
 
 * Handle class imbalance
 * Try advanced models (Random Forest, XGBoost)
