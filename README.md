@@ -1,12 +1,12 @@
-Patient Churn Prediction Project
+## Patient Churn Prediction Project
 
-Overview
+## Overview
 
 This project analyzes patient data to understand the key factors influencing churn and builds a Logistic Regression model to predict whether a patient will leave or continue with the healthcare facility.
 
 
 
-Dataset
+# Dataset
 
 The dataset includes:
 
@@ -18,7 +18,7 @@ The dataset includes:
 
 
 
- Workflow
+## Workflow
 
 1. Data Loading & Inspection
 
@@ -32,9 +32,9 @@ The dataset includes:
 * Converted categorical variables using one-hot encoding
 * Scaled features using StandardScaler
 
-# 3. Exploratory Data Analysis
+3. Exploratory Data Analysis
 
-# Univariate Analysis
+## Univariate Analysis
 
 * Distribution of churn
 * Age distribution
@@ -51,7 +51,7 @@ The dataset includes:
   * Distance
   * Portal usage
 
-# Correlation Analysis
+## Correlation Analysis
 
 * Heatmap to identify relationships between numerical features
 
@@ -66,7 +66,7 @@ The dataset includes:
 
 
 
-# Model Evaluation
+## Model Evaluation
 
 * Accuracy (Train & Test)
 * Confusion Matrix
@@ -107,8 +107,6 @@ The dataset includes:
 * Perform hyperparameter tuning
 * Feature selection
 * Deploy as an application/dashboard
-
-
 
 
 ## Conclusion
