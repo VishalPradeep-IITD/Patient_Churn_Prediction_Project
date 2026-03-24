@@ -1,4 +1,4 @@
-## Patient Churn Prediction Project
+# Patient Churn Prediction Project
 
 ## Overview
 
@@ -32,7 +32,7 @@ The dataset includes:
 * Converted categorical variables using one-hot encoding
 * Scaled features using StandardScaler
 
-3. Exploratory Data Analysis
+# 3. Exploratory Data Analysis
 
 ## Univariate Analysis
 
@@ -41,7 +41,7 @@ The dataset includes:
 * Distance spread
 * Category distributions (insurance, specialty, portal usage)
 
-# Bivariate Analysis
+## Bivariate Analysis
 
 * Relationship between churn and:
 
@@ -57,7 +57,7 @@ The dataset includes:
 
 
 
-# Model Building
+# 4. Model Building
 
 * Model: Logistic Regression
 * Train-test split: 80-20
@@ -74,7 +74,7 @@ The dataset includes:
 
 
 
-## Key Insights
+# 5. Key Insights
 
 * **Missed Appointments:** A higher number of missed visits strongly indicates that the patient is likely to leave. It reflects reduced engagement with the healthcare service.
 
