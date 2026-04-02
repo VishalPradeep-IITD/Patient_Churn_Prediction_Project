@@ -40,8 +40,174 @@ The dataset includes:
 * Age distribution
 * Distance spread
 * Category distributions (insurance, specialty, portal usage)
+* <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-# Bivariate Analysis
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PatientID</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>State</th>
+      <th>Tenure_Months</th>
+      <th>Specialty</th>
+      <th>Insurance_Type</th>
+      <th>Visits_Last_Year</th>
+      <th>Missed_Appointments</th>
+      <th>Days_Since_Last_Visit</th>
+      <th>...</th>
+      <th>Overall_Satisfaction</th>
+      <th>Wait_Time_Satisfaction</th>
+      <th>Staff_Satisfaction</th>
+      <th>Provider_Rating</th>
+      <th>Avg_Out_Of_Pocket_Cost</th>
+      <th>Billing_Issues</th>
+      <th>Portal_Usage</th>
+      <th>Referrals_Made</th>
+      <th>Distance_To_Facility_Miles</th>
+      <th>Churned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>C20000</td>
+      <td>41</td>
+      <td>Female</td>
+      <td>PA</td>
+      <td>62</td>
+      <td>Pediatrics</td>
+      <td>Medicaid</td>
+      <td>1</td>
+      <td>0</td>
+      <td>564</td>
+      <td>...</td>
+      <td>3.5</td>
+      <td>4.9</td>
+      <td>3.8</td>
+      <td>4.2</td>
+      <td>306</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>21.4</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>C20001</td>
+      <td>43</td>
+      <td>Female</td>
+      <td>GA</td>
+      <td>44</td>
+      <td>Internal Medicine</td>
+      <td>Self-Pay</td>
+      <td>7</td>
+      <td>4</td>
+      <td>254</td>
+      <td>...</td>
+      <td>2.6</td>
+      <td>3.1</td>
+      <td>4.7</td>
+      <td>4.3</td>
+      <td>1851</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>47.6</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C20002</td>
+      <td>21</td>
+      <td>Male</td>
+      <td>MI</td>
+      <td>120</td>
+      <td>Internal Medicine</td>
+      <td>Medicaid</td>
+      <td>15</td>
+      <td>5</td>
+      <td>89</td>
+      <td>...</td>
+      <td>1.6</td>
+      <td>4.4</td>
+      <td>2.1</td>
+      <td>4.7</td>
+      <td>391</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>7.1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>C20003</td>
+      <td>65</td>
+      <td>Male</td>
+      <td>FL</td>
+      <td>118</td>
+      <td>General Practice</td>
+      <td>Private</td>
+      <td>10</td>
+      <td>3</td>
+      <td>135</td>
+      <td>...</td>
+      <td>2.6</td>
+      <td>4.3</td>
+      <td>4.3</td>
+      <td>4.9</td>
+      <td>808</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>11.6</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>C20004</td>
+      <td>18</td>
+      <td>Female</td>
+      <td>CA</td>
+      <td>70</td>
+      <td>Cardiology</td>
+      <td>Medicaid</td>
+      <td>5</td>
+      <td>4</td>
+      <td>696</td>
+      <td>...</td>
+      <td>2.2</td>
+      <td>4.0</td>
+      <td>4.1</td>
+      <td>4.4</td>
+      <td>866</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>10.3</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 21 columns</p>
+</div>
+*
+* # Bivariate Analysis
 
 * Relationship between churn and:
 
