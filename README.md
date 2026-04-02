@@ -239,68 +239,15 @@ The dataset includes:
 * Accuracy (Train & Test)
 * Confusion Matrix
 * Classification Report (Precision, Recall, F1-score)
-  import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+  Classification Report:
+              precision    recall  f1-score   support
 
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+           0       0.00      0.00      0.00       106
+           1       0.73      1.00      0.85       294
 
-# Features and target
-X = df.drop('Churned', axis=1)
-y = df['Churned']
-
-
-if 'CustomerID' in X.columns:
-    X = X.drop('CustomerID', axis=1)
-
-X = X.select_dtypes(exclude=['datetime64[ns]'])
-
-
-X = pd.get_dummies(X, drop_first=True)
-
-# Split
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
-
-# Scaling
-scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
-
-# Model
-model = LogisticRegression(max_iter=1000)
-model.fit(X_train, y_train)
-
-# Predictions
-y_train_pred = model.predict(X_train)
-y_test_pred = model.predict(X_test)
-
-# Accuracy
-print("Train Accuracy:", accuracy_score(y_train, y_train_pred) * 100, "%")
-print("Test Accuracy:", accuracy_score(y_test, y_test_pred) * 100, "%")
-
-# Confusion Matrix
-cm = confusion_matrix(y_test, y_test_pred)
-
-plt.figure(figsize=(8, 6))
-sns.heatmap(cm, annot=True, fmt='d', cmap='RdPu',
-            xticklabels=['Stayed (0)', 'Churned (1)'],
-            yticklabels=['Stayed (0)', 'Churned (1)'])
-
-plt.title('Confusion Matrix - Patient Churn Prediction')
-plt.xlabel('Predicted Label')
-plt.ylabel('True Label')
-plt.show()
-
-# Report
-print("Classification Report:")
-print(classification_report(y_test, y_test_pred))
-
-
+    accuracy                           0.73       400
+   macro avg       0.37      0.50      0.42       400
+weighted avg       0.54      0.73      0.62       400
 
 # Key Insights
 
