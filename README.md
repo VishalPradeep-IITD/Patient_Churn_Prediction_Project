@@ -242,7 +242,8 @@ The dataset includes:
 <img width="440" height="619" alt="image" src="https://github.com/user-attachments/assets/c53d6114-6837-4b64-864d-b45b46210b72" />
 
 
-<img width="652" height="231" alt="image" src="https://github.com/user-attachments/assets/4dae08e3-4290-4dd1-b9b2-95f398deae65" />
+<img width="650" height="167" alt="image" src="https://github.com/user-attachments/assets/31b047d9-f647-4584-a9b7-f5b7cb032a4d" />
+
 
 
 
