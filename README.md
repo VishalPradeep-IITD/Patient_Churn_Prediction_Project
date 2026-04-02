@@ -18,7 +18,7 @@ The dataset includes:
 
 
 
-## Workflow
+# Workflow
 
 1. Data Loading & Inspection
 
@@ -32,16 +32,16 @@ The dataset includes:
 * Converted categorical variables using one-hot encoding
 * Scaled features using StandardScaler
 
-# 3. Exploratory Data Analysis
+# Exploratory Data Analysis
 
-## Univariate Analysis
+# Univariate Analysis
 
 * Distribution of churn
 * Age distribution
 * Distance spread
 * Category distributions (insurance, specialty, portal usage)
 
-## Bivariate Analysis
+# Bivariate Analysis
 
 * Relationship between churn and:
 
@@ -51,13 +51,13 @@ The dataset includes:
   * Distance
   * Portal usage
 
-## Correlation Analysis
+# Correlation Analysis
 
 * Heatmap to identify relationships between numerical features
 
 
 
-# 4. Model Building
+#  Model Building
 
 * Model: Logistic Regression
 * Train-test split: 80-20
@@ -66,7 +66,7 @@ The dataset includes:
 
 
 
-  ## Model Evaluation
+  # Model Evaluation
 
 * Accuracy (Train & Test)
 * Confusion Matrix
@@ -74,7 +74,7 @@ The dataset includes:
 
 
 
-## 5. Key Insights
+# Key Insights
 
 * **Missed Appointments:** A higher number of missed visits strongly indicates that the patient is likely to leave. It reflects reduced engagement with the healthcare service.
 
@@ -92,7 +92,7 @@ The dataset includes:
 
 * **Tenure:** New patients are more likely to leave compared to long-term patients. Early-stage engagement is critical for retention.
 
-## Requirements
+# Requirements
 
 * pandas
 * numpy
@@ -100,7 +100,7 @@ The dataset includes:
 * seaborn
 * scikit-learn
 
-## Future Improvements
+# Future Improvements
 
 * Handle class imbalance
 * Try advanced models (Random Forest, XGBoost)
@@ -109,6 +109,6 @@ The dataset includes:
 * Deploy as an application/dashboard
 
 
-## Conclusion
+# Conclusion
 
 #This project demonstrates a complete pipeline from data analysis to predictive modeling. It highlights the most influential factors behind patient churn and provides a base for improving retention strategies.
