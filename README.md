@@ -239,7 +239,7 @@ The dataset includes:
 * Accuracy (Train & Test)
 * Confusion Matrix
 * Classification Report (Precision, Recall, F1-score)
-<img width="649" height="547" alt="image" src="https://github.com/user-attachments/assets/cc4fd454-c42d-462a-b3ab-b3885321c5b8" />
+<img width="440" height="619" alt="image" src="https://github.com/user-attachments/assets/c53d6114-6837-4b64-864d-b45b46210b72" />
 <img width="572" height="234" alt="image" src="https://github.com/user-attachments/assets/ab589bdc-e224-48fc-be23-25852431f564" />
 
 
