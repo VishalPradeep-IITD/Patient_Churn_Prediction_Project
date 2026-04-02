@@ -239,15 +239,8 @@ The dataset includes:
 * Accuracy (Train & Test)
 * Confusion Matrix
 * Classification Report (Precision, Recall, F1-score)
-  Classification Report:
-              precision    recall  f1-score   support
+<img width="572" height="234" alt="image" src="https://github.com/user-attachments/assets/ab589bdc-e224-48fc-be23-25852431f564" />
 
-           0       0.00      0.00      0.00       106
-           1       0.73      1.00      0.85       294
-
-    accuracy                           0.73       400
-   macro avg       0.37      0.50      0.42       400
-weighted avg       0.54      0.73      0.62       400
 
 # Key Insights
 
