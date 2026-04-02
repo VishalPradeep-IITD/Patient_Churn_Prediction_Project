@@ -219,7 +219,7 @@ The dataset includes:
 
 * Heatmap to identify relationships between numerical features
   <img width="1062" height="848" alt="image" src="https://github.com/user-attachments/assets/1af33938-9f5e-4c1d-a125-a9c015ea1b4b" />
-  <img width="649" height="547" alt="image" src="https://github.com/user-attachments/assets/cc4fd454-c42d-462a-b3ab-b3885321c5b8" />
+  
 
 
 
@@ -239,6 +239,7 @@ The dataset includes:
 * Accuracy (Train & Test)
 * Confusion Matrix
 * Classification Report (Precision, Recall, F1-score)
+<img width="649" height="547" alt="image" src="https://github.com/user-attachments/assets/cc4fd454-c42d-462a-b3ab-b3885321c5b8" />
 <img width="572" height="234" alt="image" src="https://github.com/user-attachments/assets/ab589bdc-e224-48fc-be23-25852431f564" />
 
 
