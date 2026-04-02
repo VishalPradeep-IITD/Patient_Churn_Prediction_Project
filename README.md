@@ -31,16 +31,7 @@ The dataset includes:
 * Removed irrelevant columns like IDs
 * Converted categorical variables using one-hot encoding
 * Scaled features using StandardScaler
-
-# Exploratory Data Analysis
-
-# Univariate Analysis
-
-* Distribution of churn
-* Age distribution
-* Distance spread
-* Category distributions (insurance, specialty, portal usage)
-<table border="1" class="dataframe">
+  <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -193,6 +184,21 @@ The dataset includes:
 <p>5 rows × 21 columns</p>
 </div>
 *
+
+# Exploratory Data Analysis
+
+# Univariate Analysis
+
+* Distribution of churn
+* Age distribution
+* Distance spread
+* Category distributions (insurance, specialty, portal usage)
+<img width="560" height="450" alt="image" src="https://github.com/user-attachments/assets/c576a5b0-87fc-4205-ac17-eb5b8f090af8" />
+<img width="584" height="455" alt="image" src="https://github.com/user-attachments/assets/e8b0c590-719e-436c-853c-6cf8f86b21ec" />
+<img width="520" height="455" alt="image" src="https://github.com/user-attachments/assets/d993b47b-4a99-46ef-9c9c-38594cf95b30" />
+<img width="512" height="389" alt="image" src="https://github.com/user-attachments/assets/831dc9b6-57dd-4330-8ef9-9b253d33cb96" />
+<img width="393" height="389" alt="image" src="https://github.com/user-attachments/assets/492b6105-d871-4233-8b95-3b7f71c58acc" />
+
 * # Bivariate Analysis
 
 * Relationship between churn and:
@@ -202,10 +208,20 @@ The dataset includes:
   * Costs
   * Distance
   * Portal usage
+<img width="560" height="427" alt="image" src="https://github.com/user-attachments/assets/baffe012-5892-40f4-9d5c-66a1e1ce9ae7" />
+<img width="580" height="450" alt="image" src="https://github.com/user-attachments/assets/46c3f21e-2b33-4a3c-b2cb-c1b5a9144840" />
+<img width="567" height="450" alt="image" src="https://github.com/user-attachments/assets/15e92557-0639-4b4e-a9b7-5cd39201d6dd" />
+<img width="562" height="450" alt="image" src="https://github.com/user-attachments/assets/2e1110d4-e484-4d6c-b3f4-3cb3d6cdbd69" />
+<img width="571" height="450" alt="image" src="https://github.com/user-attachments/assets/08864c0c-7ab8-4cad-9f24-b16687f9d7ac" />
+<img width="567" height="450" alt="image" src="https://github.com/user-attachments/assets/33590aae-e516-4dc7-ab3c-0f3df9a22f6f" />
 
 # Correlation Analysis
 
 * Heatmap to identify relationships between numerical features
+  <img width="1062" height="848" alt="image" src="https://github.com/user-attachments/assets/1af33938-9f5e-4c1d-a125-a9c015ea1b4b" />
+  <img width="649" height="547" alt="image" src="https://github.com/user-attachments/assets/cc4fd454-c42d-462a-b3ab-b3885321c5b8" />
+
+
 
 
 
@@ -223,6 +239,66 @@ The dataset includes:
 * Accuracy (Train & Test)
 * Confusion Matrix
 * Classification Report (Precision, Recall, F1-score)
+  import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+# Features and target
+X = df.drop('Churned', axis=1)
+y = df['Churned']
+
+
+if 'CustomerID' in X.columns:
+    X = X.drop('CustomerID', axis=1)
+
+X = X.select_dtypes(exclude=['datetime64[ns]'])
+
+
+X = pd.get_dummies(X, drop_first=True)
+
+# Split
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Scaling
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# Model
+model = LogisticRegression(max_iter=1000)
+model.fit(X_train, y_train)
+
+# Predictions
+y_train_pred = model.predict(X_train)
+y_test_pred = model.predict(X_test)
+
+# Accuracy
+print("Train Accuracy:", accuracy_score(y_train, y_train_pred) * 100, "%")
+print("Test Accuracy:", accuracy_score(y_test, y_test_pred) * 100, "%")
+
+# Confusion Matrix
+cm = confusion_matrix(y_test, y_test_pred)
+
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, fmt='d', cmap='RdPu',
+            xticklabels=['Stayed (0)', 'Churned (1)'],
+            yticklabels=['Stayed (0)', 'Churned (1)'])
+
+plt.title('Confusion Matrix - Patient Churn Prediction')
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+plt.show()
+
+# Report
+print("Classification Report:")
+print(classification_report(y_test, y_test_pred))
 
 
 
